@@ -6,7 +6,7 @@ import { getWorkouts } from '@/queries';
 const TheLibrary = async () => {
     const workouts = await getWorkouts();
     return (
-        <main className="my-25">
+        <main id="workouts" className="my-25">
             <section>
                 <h2 className="font-oswald font-bold text-3xl text-white mb-2">
                     THE LIBRARY

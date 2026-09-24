@@ -29,7 +29,7 @@ const Heor = () => {
 
                         {/* CTA */}
                         <Link
-                            href="#library"
+                            href="#workouts"
                             className="mt-6 inline-flex items-center gap-2 rounded-md bg-[#ccff00] px-5 py-3 text-[12px] font-black text-black transition hover:bg-[#b8e600]"
                         >
                             BROWSE WORKOUTS
