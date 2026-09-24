@@ -7,16 +7,15 @@ const Heor = () => {
     return (
         <>
             <main className="mt-12">
-                <section className="flex items-center justify-between rounded-xl border border-[#2a2b30] bg-[#15171D] py-18 px-14">
-                    <div className="flex flex-col items-start gap-y-5 w-[55%]">
-                        {/* Hero Content */}
+                <section className="md:flex items-center justify-between rounded-xl border border-[#2a2b30] bg-[#15171D] py-18 px-14">
+                    <div className="flex flex-col items-start gap-y-5 w-full md:w-[55%]">
                         {/* Eyebrow */}
                         <p className="text-[11px] font-bold font-inter text-[#C2F800]">
                             WORKOUT LIBRARY
                         </p>
 
                         {/* Heading */}
-                        <h1 className="text-white text-[60px] font-oswald font-black uppercase leading-[0.98] tracking-[-3px]">
+                        <h1 className="text-white text-4xl md:text-[60px] font-oswald font-black uppercase leading-[0.98] tracking-[-3px]">
                             Train With Intent. Log Every Set.
                         </h1>
 
