@@ -7,7 +7,7 @@ interface Props {
     workout: Worker;
 }
 
-const AddworkoutDetails = ({ workout }: Props) => {
+const ActinAddworkout = ({ workout }: Props) => {
     const { setAddToPlan, setSaveToPlan, addToPlan, saveToPlan } = usePlan();
 
     // handle AddPlan function
@@ -67,4 +67,4 @@ const AddworkoutDetails = ({ workout }: Props) => {
     );
 };
 
-export default AddworkoutDetails;
+export default ActinAddworkout;

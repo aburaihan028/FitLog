@@ -1,4 +1,4 @@
-import AddworkoutDetails from '@/components/AddworkoutDetails';
+import ActinAddworkout from '@/components/ActinAddworkout';
 import { getSingleWorkouts } from '@/queries';
 import Image from 'next/image';
 
@@ -130,7 +130,7 @@ const WorkoutDetailsPage = async ({ params }: Props) => {
                     </div>
 
                     {/* Action Buttons */}
-                    <AddworkoutDetails workout={workout} />
+                    <ActinAddworkout workout={workout} />
                 </div>
             </div>
         </div>
