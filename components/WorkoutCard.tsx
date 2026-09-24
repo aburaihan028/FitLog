@@ -2,7 +2,6 @@ import { Worker } from '@/types';
 import { Clock3, Flame, Star } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 interface Props {
     workout: Worker;
 }

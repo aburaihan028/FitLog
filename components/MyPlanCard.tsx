@@ -2,7 +2,6 @@ import { Worker } from '@/types';
 import { XIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 
 interface DataPlan {
     addToPlan: Worker[];
