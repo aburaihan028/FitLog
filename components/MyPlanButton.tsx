@@ -10,6 +10,41 @@ const MyPlanButton = () => {
     const [activeTab, setActiveTab] = useState<'today' | 'saved'>('today');
     const [sortBy, setSortBy] = useState('Duration');
 
+    const handleClose = (id: number) => {
+        if (activeTab === 'today') {
+            setAddToPlan((prev) => prev.filter((item) => item.id !== id));
+            toast.error("Removed from today's plan");
+        } else {
+            setSaveToPlan((prev) => prev.filter((item) => item.id !== id));
+            toast.error('Removed from saved list');
+        }
+    };
+
+    const sortItems = useCallback(
+        (items: typeof addToPlan) => {
+            if (!items) return items;
+            const sorted = [...items];
+
+            switch (sortBy) {
+                case 'Duration':
+                    return sorted.sort((a, b) => a.duration - b.duration);
+                case 'Calories':
+                    return sorted.sort(
+                        (a, b) => a.caloriesBurned - b.caloriesBurned,
+                    );
+                case 'Name':
+                    return sorted.sort((a, b) => a.name?.localeCompare(b.name));
+                default:
+                    return sorted;
+            }
+        },
+        [sortBy],
+    );
+
+    const currentList = useMemo(
+        () => sortItems(activeTab === 'today' ? addToPlan : saveToPlan),
+        [activeTab, addToPlan, saveToPlan, sortItems],
+    );
     return (
         <>
             <div className="bg-[#121824] border border-gray-800/80 rounded-2xl p-6 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-800/80">
